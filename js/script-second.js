@@ -5,10 +5,10 @@
   const getLocalKey = localStorage.getItem("myKey");
   const person = JSON.parse(getLocalKey);
 
-  Object.entries(person).forEach((value) => {
+  Object.keys(person).forEach((key) => {
     const li = document.createElement("li");
 
-    li.innerHTML = value;
+    li.innerHTML = `${key} :  ${person[key]}`;
 
     ulLi.append(li);
   });
